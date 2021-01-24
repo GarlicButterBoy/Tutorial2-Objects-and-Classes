@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GetValidMethods;
 
 namespace Tutorial2_Objects_and_Classes
 {
@@ -38,6 +39,18 @@ namespace Tutorial2_Objects_and_Classes
 
                 //Set X and Y using mutators
                 anotherPoint.SetPoint(99, 90);
+
+                //Print the distance between two points
+                Console.WriteLine("The distance between {0} and {1} is {2:F2}.", thePoint, anotherPoint, thePoint - anotherPoint);
+
+                //Reset the original point back
+                thePoint.SetPoint(0, 0);
+
+                //Set X and Y using user input
+                Console.Write("X: ");
+                anotherPoint.X = GetValid.WholeNumber(-CartesianPoint.Limit, CartesianPoint.Limit);
+                Console.Write("Y: ");
+                anotherPoint.Y = GetValid.WholeNumber(-CartesianPoint.Limit, CartesianPoint.Limit);
 
                 //Print the distance between two points
                 Console.WriteLine("The distance between {0} and {1} is {2:F2}.", thePoint, anotherPoint, thePoint - anotherPoint);

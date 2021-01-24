@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetValidMethods\GetValidMethods.csproj">
+      <Project>{4f9e7962-0120-4ca7-826b-b910e9113f38}</Project>
+      <Name>GetValidMethods</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
