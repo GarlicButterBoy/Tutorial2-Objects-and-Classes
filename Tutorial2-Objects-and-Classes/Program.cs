@@ -20,6 +20,36 @@ namespace Tutorial2_Objects_and_Classes
     {
         static void Main(string[] args)
         {
+
+            try
+            {
+                //Set a Limit
+                CartesianPoint.Limit = 99;
+                //Create Two Points
+                CartesianPoint thePoint = new CartesianPoint();
+                CartesianPoint anotherPoint = new CartesianPoint(3, 4);
+
+                //Print the distance between two points
+                Console.WriteLine("The distance between {0} and {1} is {2:F2}.", thePoint, anotherPoint, thePoint - anotherPoint);
+
+                //Updating Points (property sets)
+                thePoint.X = 99;
+                thePoint.Y = 98;
+
+                //Set X and Y using mutators
+                anotherPoint.SetPoint(99, 90);
+
+                //Print the distance between two points
+                Console.WriteLine("The distance between {0} and {1} is {2:F2}.", thePoint, anotherPoint, thePoint - anotherPoint);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\n{0}\n{1}", e.GetType(), e.Message);
+            }
+
+            //End Program
+            Console.WriteLine("\nPress Any Key To Continue");
+            Console.ReadKey();
         }
     }
 }
